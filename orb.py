@@ -5,6 +5,11 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
+ref_path = os.getcwd() + '/referenceImages'
+
+query_path = os.getcwd() + '/queryImages'
+
+
 #read image
 def read_image(path):
     # read the image without changing its content
@@ -79,3 +84,18 @@ def image_retrieval(image_location, match_num=0):
     img=mpimg.imread(path+x)
     imgplot = plt.imshow(img)
     plt.show()
+
+#function to print images including lines between matches
+def draw_matches(image1, image2, n_matches=10):
+  detector = cv.ORB.create()
+  image1 = cv.imread(image1)
+  image2 = cv.imread(image2)
+  kp1, des1 = detector.detectAndCompute(image1, None)
+  kp2, des2 = detector.detectAndCompute(image2, None)
+  bf = cv.BFMatcher(cv.NORM_HAMMING, crossCheck=True)
+  matches = bf.match(des1, des2)
+  matches = sorted(matches, key = lambda x: x.distance)
+  img_matches = cv.drawMatches(image1, kp1, image2, kp2, matches[:n_matches], image2, flags=2) # Show top 10 matches
+  plt.figure(figsize=(8, 8))
+  plt.title(type(detector))
+  plt.imshow(img_matches); plt.show()
