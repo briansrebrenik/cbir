@@ -31,6 +31,26 @@ image retrieval tests Jupyter Notebook (I have also included a pdf if you have
   difficulty opening the notebook).
 
 ## Outlined Steps:
-Below I outline the steps I took in the notebook referenced above:
+Below I outline the steps I took in the notebook referenced above (numbers below
+  refer to cell #):
+1. Importing required functions from orb.py file
+2. Creating variable with paths to image folders
+3. Creating list with reference image file names
+4. Creating list with descriptors for each image
+5. Creating list of query image file names
+After completing the steps above, we can now run the main function "image_retrieval"
+on each of the query images.
 
-1. 
+##Results
+The system was able to compute the best match correctly on the first match 8 out
+of 11 times.
+On one image the system was able to find the match on the second highest match.
+Two out of the 11 query images were unable to find matches due to blurryness or
+image rotation.
+
+## Packages Used
+The main package used for the system was the OpenCV Python package which included
+the algorithms for the ORB descriptor calculations and the Brute Force Matching
+algorithm.
+To see the rest of the required packages, I have included a .yml file from my virtual
+Conda environment. 
