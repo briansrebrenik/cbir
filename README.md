@@ -38,8 +38,12 @@ Below I outline the steps I took in the notebook referenced above (numbers below
 3. Creating list with reference image file names
 4. Creating list with descriptors for each image
 5. Creating list of query image file names
+
 After completing the steps above, we can now run the main function "image_retrieval"
 on each of the query images.
+I have also included a function "draw_matches" which will print the two images,
+with lines connecting the closest matches determined by the algorithm.
+
 
 ## Results
 The system was able to compute the best match correctly on the first match 8 out
