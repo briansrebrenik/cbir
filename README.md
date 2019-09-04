@@ -57,5 +57,5 @@ image rotation.
 The main package used for the system was the OpenCV Python package which included
 the algorithms for the ORB descriptor calculations and the Brute Force Matching
 algorithm.
-To see the rest of the required packages, I have included a .yml file from my virtual
-Conda environment.
+To see the rest of the required packages, I have included a .txt file from my virtual
+Conda environment which includes all packages used.
