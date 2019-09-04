@@ -9,7 +9,7 @@ find key "descriptors" for an image that can be used to compare to the descripto
 of images in the database.
 For my system, I used ORB (Oriented FAST and Rotated BRIEF) from the [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_orb/py_orb.html) Python library.
 ORB is "a good alternative to SIFT and SURF in computation cost".
-ORB combines the [FAST] (https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_fast/py_fast.html) algorithm for corner detection and the [BRIEF] (https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_brief/py_brief.html)
+ORB combines the [FAST](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_fast/py_fast.html) algorithm for corner detection and the [BRIEF](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_brief/py_brief.html)
 algorithm for feature descriptor calculation, "with many modifications to enhance
 performance".
 
