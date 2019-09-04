@@ -20,7 +20,8 @@ use an algorithm to find the closest matching image in the database (reference
   images). For this I used a [Brute Force Matcher](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_matcher/py_matcher.html#).
   The Brute Force Matcher, a type of nearest neighbors algorithm, that takes the
   descriptors of the query image and matches with the reference images using a
-  distance calculation. For my algorithm, I used the top 10 matches for each image,
+  distance calculation (in this case, Hamming Distance).
+  For my algorithm, I used the top 10 matches for each image,
   and then chose a best match using the lowest average distance.
 
 ## How to use the CBIR
