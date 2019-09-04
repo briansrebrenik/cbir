@@ -40,11 +40,7 @@ def create_descriptors(images):
 
 #find descriptors for query image
 def nearest_neighbor(image, ref_desc, match_num=0):
-    FLANN_INDEX_LSH = 0
-    index_params= dict(algorithm = FLANN_INDEX_LSH,
-                   table_number = 12,
-                   key_size = 20,
-                   multi_probe_level = 2)
+    
     search_params = dict(checks = 100)
     bf = cv.BFMatcher(cv.NORM_HAMMING, crossCheck=True)
     x = []
