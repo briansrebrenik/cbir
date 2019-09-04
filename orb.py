@@ -40,8 +40,7 @@ def create_descriptors(images):
 
 #find descriptors for query image
 def nearest_neighbor(image, ref_desc, match_num=0):
-    
-    search_params = dict(checks = 100)
+    #using Hamming distance 
     bf = cv.BFMatcher(cv.NORM_HAMMING, crossCheck=True)
     x = []
     #find best matches for each reference image
