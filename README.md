@@ -25,7 +25,7 @@ use an algorithm to find the closest matching image in the database (reference
 
 ## How to use the CBIR
 The "orb.py" file contains all of the functions required to read in the images,
-calculate descriptors, and then run the brute force algorithm to find the closes match.
+calculate descriptors, and then run the brute force algorithm to find the closest match.
 I ran the algorithm over all the query images, and the results can be found in the
 image retrieval tests Jupyter Notebook (I have also included a pdf if you have
   difficulty opening the notebook).
@@ -41,16 +41,21 @@ Below I outline the steps I took in the notebook referenced above (numbers below
 After completing the steps above, we can now run the main function "image_retrieval"
 on each of the query images.
 
-##Results
+## Results
 The system was able to compute the best match correctly on the first match 8 out
 of 11 times.
 On one image the system was able to find the match on the second highest match.
 Two out of the 11 query images were unable to find matches due to blurryness or
 image rotation.
 
+## Example
+![example2](https://github.com/briansrebrenik/cbir/blob/master/example2.png)
+![example3](https://github.com/briansrebrenik/cbir/blob/master/example3.png)
+
+
 ## Packages Used
 The main package used for the system was the OpenCV Python package which included
 the algorithms for the ORB descriptor calculations and the Brute Force Matching
 algorithm.
 To see the rest of the required packages, I have included a .yml file from my virtual
-Conda environment. 
+Conda environment.
