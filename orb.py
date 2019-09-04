@@ -39,7 +39,7 @@ def create_descriptors(images):
 
 
 #find descriptors for query image
-def nearest_neighbor(image, match_num=0):
+def nearest_neighbor(image, ref_desc, match_num=0):
     FLANN_INDEX_LSH = 0
     index_params= dict(algorithm = FLANN_INDEX_LSH,
                    table_number = 12,
@@ -65,7 +65,7 @@ def nearest_neighbor(image, match_num=0):
 
 
 #function to get descriptors for query image and then run nearest neighbors function
-def image_retrieval(image_location, match_num=0):
+def image_retrieval(image_location, ref_desc, match_num=0):
     print('Query Image:')
     img=mpimg.imread(image_location)
     imgplot = plt.imshow(img)
@@ -77,7 +77,7 @@ def image_retrieval(image_location, match_num=0):
     kp, query_image_desc = detector.detectAndCompute(gray, mask)
     #index of closest match
     num = match_num
-    x = nearest_neighbor(query_image_desc, match_num=num)
+    x = nearest_neighbor(query_image_desc, ref_desc, match_num=num)
     print('Closest Match:')
     print(x)
     path = os.getcwd() + '/referenceImages/'
