@@ -56,7 +56,7 @@ def nearest_neighbor(image, ref_desc, match_num=0):
         #https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_matcher/py_matcher.html#
         matches = bf.match(descriptors, image)
         #keep top 10 matches
-        matches = sorted(matches, key = lambda x: x.distance)[:5]
+        matches = sorted(matches, key = lambda x: x.distance)[:10]
         x.append([matches, name])
     avg_distances = [(np.mean([y.distance for y in match[0]]), match[1]) for match in x]
     avg_distances = sorted(avg_distances, key=lambda x: x[0])
