@@ -62,6 +62,8 @@ image rotation.
 The main package used for the system was the OpenCV Python package which included
 the algorithms for the ORB descriptor calculations and the Brute Force Matching
 algorithm.
+Other important packages include matplotlib for displaying images, TQDM for
+timing descriptor calculation, and OS for determining image locations.
 To see the rest of the required packages, I have included a packages.txt file from my virtual
 Conda environment which includes all packages used. This can be used to create a
 clone of my environment -  https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments.
